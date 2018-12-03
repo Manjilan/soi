@@ -7,7 +7,7 @@ class Table extends Component {
   constructor(){
     super();
     this.state={
-    investments:[]
+    investments:[],
     }
   }
   componentDidMount(){

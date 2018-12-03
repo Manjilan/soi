@@ -1,6 +1,7 @@
 .table{
   background-color: #D8D8DF;
   margin: 3% auto;
+  border: 1px solid #BFBBBA;
 }
 .row{
   display: grid;
@@ -31,3 +32,6 @@
 .detailRows{
   background-color: white;
 }
+/* .investment-details{
+  display: none;
+} */

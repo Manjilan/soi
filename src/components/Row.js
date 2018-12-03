@@ -15,7 +15,7 @@ class Row extends Component {
     let info=this.props.info.map((investmentInfo, index)=>{
       let details=investmentInfo.issued_assets.map((asset, index)=>{
         return (
-          <div className="row" key={asset.id}>
+          <div className="row investment-details" key={asset.id}>
             <p className="column">{}</p>
             <p className="column">{asset.asset_class}</p>
             <p className="column">{asset.investment_date}</p>
@@ -26,7 +26,7 @@ class Row extends Component {
       return (
         <div key={investmentInfo.id}>
           <div className="row">
-            <p className="column"><i class="fas fa-plus" onClick={this.showInvestmentDetails}></i> {investmentInfo.name}</p>
+            <p className="column"><i className="fas fa-plus" onClick={this.showInvestmentDetails}></i> {investmentInfo.name}</p>
             <p className="column">{}</p>
             <p className="column">{}</p>
             <p className="column">{investmentInfo.quantity}</p>
