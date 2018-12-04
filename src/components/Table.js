@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./Table.css";
 import Row from "./Row";
-import API from "../utils/API";
 
 class Table extends Component {
   constructor(){
@@ -10,12 +9,8 @@ class Table extends Component {
     investments:[],
     }
   }
-  componentDidMount(){
-    API.getInvestments()
-    .then(response =>{
-      console.log(response.data);
-      this.setState({investments: response.data})
-    })
+  componentWillReceiveProps(nextProps) {
+    this.setState({ investments:nextProps.inv });
   }
   render(){
     return(

@@ -11,6 +11,7 @@ class InvestmentDate extends Component {
   }
   handleChange(event){
     this.setState({date: this.parseDate(event.target.value)});
+    this.props.filterByDate(this.parseDate(event.target.value));
   }
   parseDate(date){
     let dateDetails = date.split("-");
